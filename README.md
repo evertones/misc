@@ -12,4 +12,5 @@
   1. Clone the repo
   2. Access its folder
   3. Execute 'npm install'
-  4. Access on a browser the address http://localhost:8080
+  4. Execute 'node server.js'
+  5. Access the address http://localhost:8080 on your browser

@@ -3,6 +3,21 @@ module.exports = function(app) {
     /* ---------------------------------------------
        Index Routes 
        ---------------------------------------------*/
+    app.get('/ugly', function(req, res) {
+        console.log('-------------------------------------------');
+        console.log('>>> GET - Page accessed: ' + req.url);
+        console.log('-------------------------------------------');
+
+        var html = '<h1>Page accessed via GET</h1>';
+        html += '<h2>This page is ugly because we are not working with a templating engine (e.g. Jade, Mustache, EJS etc). </h2>';
+        html += '<br /><br /><br />';
+        html += '<p>Take a look on NodeJS console to see the log.</p>';
+        html += '<br /><br /><br />';
+        html += "<a href='index.html'>Return</a>";
+
+        res.send(html);
+    });
+
     app.post('/form', function(req, res) {
         console.log('-------------------------------------------');
         console.log('>>> POST - Submitted page: ' + req.url + '<<<');
