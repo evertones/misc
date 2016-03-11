@@ -19,7 +19,7 @@ import org.junit.Test;
 public class DateTest {
 	
 	@Test()
-	public void testDiffDays1() {
+	public void daysInNormalYear() {
 		long result = DateUtil.daysBetweenDates("01/01/2015", "01/01/2016");
 		System.out.println("[testDiffDays1] Result: " + result);
 		
@@ -27,7 +27,7 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testDiffDays2() {
+	public void daysInBissextileTheYear() {
 		long result = DateUtil.daysBetweenDates("01/01/2016", "01/01/2017");
 		System.out.println("[testDiffDays2] Result: " + result);
 		
@@ -35,7 +35,7 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testDiffDays3() {
+	public void daysBetween2RandomStringDates() {
 		long result = DateUtil.daysBetweenDates("04/11/1981", "06/06/1982");
 		System.out.println("[testDiffDays3] Result: " + result);
 		
@@ -43,7 +43,7 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testDiffMonths1() {
+	public void monthsBetweenFirstAndLastDayOfTheYear() {
 		long result = DateUtil.monthsBetweenDates("01/01/2016", "31/12/2016");
 		System.out.println("[testDiffMonths1] Result: " + result);
 		
@@ -51,7 +51,7 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testDiffMonths2() {
+	public void monthsBetween2RandomStringDates() {
 		long result = DateUtil.monthsBetweenDates("04/11/1981", "06/06/1982");
 		System.out.println("[testDiffMonths2] Result: " + result);
 		
@@ -59,7 +59,7 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testDiffYears1() {
+	public void yearsBetweenFirstAndLastDayOfTheYear() {
 		long result = DateUtil.yearsBetweenDates("01/01/2016", "31/12/2016");
 		System.out.println("[testDiffYears1] Result: " + result);
 		
@@ -67,7 +67,7 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testDiffYears2() {
+	public void yearsBetweenFirstDayOfYear1AndFirstDayOfYear2() {
 		long result = DateUtil.yearsBetweenDates("01/01/2016", "01/01/2017");
 		System.out.println("[testDiffYears2] Result: " + result);
 		
@@ -75,7 +75,7 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testDiffYears3() {
+	public void yearsBetween2RandomDates() {
 		long result = DateUtil.yearsBetweenDates("04/11/1981", "02/03/2016");
 		System.out.println("[testDiffYears3] Result: " + result);
 		
@@ -83,7 +83,7 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testDiffYears4() {
+	public void negativeYearsBetween2RandomDates() {
 		long result = DateUtil.yearsBetweenDates("02/03/2016", "04/11/1981");
 		System.out.println("[testDiffYears4] Result: " + result);
 		
@@ -91,7 +91,7 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testTextFromDate1() {
+	public void stringFromDateInFormatddMMyyyy() {
 		LocalDate date = LocalDate.of(2016, Month.FEBRUARY, 01);
 		String result = DateUtil.textFromDate(date, "dd/MM/yyyy");
 		System.out.println("[testTextFromDate1] Result: " + result);
@@ -100,7 +100,7 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testTextFromDate2() {
+	public void stringFromDateInFormatMMddyyyy() {
 		LocalDate date = LocalDate.of(2016, Month.FEBRUARY, 01);
 		String result = DateUtil.textFromDate(date, "MM/dd/yyyy");
 		System.out.println("[testTextFromDate2] Result: " + result);
@@ -109,7 +109,7 @@ public class DateTest {
 	}
 	
 	@Test(expected=DateTimeException.class)
-	public void testTextFromDate3() {
+	public void throwsExceptionFromInvalidDate() {
 		LocalDate date = LocalDate.of(2016, Month.FEBRUARY, 30);
 		String result = DateUtil.textFromDate(date, "dd/MM/yyyy");
 		System.out.println("[testTextFromDate3] Result: " + result);
@@ -118,7 +118,7 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testDateFromText1() {
+	public void compareEqualDatesFrom2DifferentInstances() {
 		LocalDate date = LocalDate.of(1981, Month.NOVEMBER, 04);
 		LocalDate result = DateUtil.dateFromText("04/11/1981", "dd/MM/yyyy");
 		System.out.println("[testDateFromText1] Result: " + result);
@@ -127,7 +127,7 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testDateAfterDate1() {
+	public void expectFalseInDate1982AfterDate1981() {
 		LocalDate date1 = LocalDate.of(1981, Month.NOVEMBER, 04);
 		LocalDate date2 = LocalDate.of(1982, Month.JUNE, 06);
 		
@@ -138,7 +138,7 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testDateAfterDate2() {
+	public void expectTrueInDate1982AfterDate1981() {
 		LocalDate date1 = LocalDate.of(1982, Month.JUNE, 06);
 		LocalDate date2 = LocalDate.of(1981, Month.NOVEMBER, 04);
 		
@@ -149,7 +149,7 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testDateAfterDate3() {
+	public void expectFalseComparingAfterFinalDateWithNull() {
 		LocalDate date1 = null;
 		LocalDate date2 = LocalDate.of(1982, Month.JUNE, 06);
 		
@@ -160,7 +160,7 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testDateAfterDate4() {
+	public void expectFalseComapringAfterInitialDateWithNull() {
 		LocalDate date1 = LocalDate.of(1981, Month.NOVEMBER, 04);
 		LocalDate date2 = null;
 		
@@ -171,7 +171,7 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testDateBeforeDate1() {
+	public void expectFalseComparingInitialDateAfterFinalDate() {
 		LocalDate date1 = LocalDate.of(1981, Month.NOVEMBER, 04);
 		LocalDate date2 = LocalDate.of(1982, Month.JUNE, 06);
 		
@@ -182,7 +182,7 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testDateBeforeDate2() {
+	public void expectFalseComparingInitialDateBeforeFinalDate() {
 		LocalDate date1 = LocalDate.of(1982, Month.JUNE, 06);
 		LocalDate date2 = LocalDate.of(1981, Month.NOVEMBER, 04);
 		
@@ -193,29 +193,29 @@ public class DateTest {
 	}
 	
 	@Test()
-	public void testDateBeforeDate3() {
+	public void expectFalseComapringBeforeFinalDateWithNull() {
 		LocalDate date1 = null;
 		LocalDate date2 = LocalDate.of(1982, Month.JUNE, 06);
 		
-		boolean result = DateUtil.isDate1AfterDate2(date1, date2);
+		boolean result = DateUtil.isDate1BeforeDate2(date1, date2);
 		System.out.println("[testDateBeforeDate3] Result: " + result);
 		
 		assertEquals(false, result);
 	}
 	
 	@Test()
-	public void testDateBeforeDate4() {
+	public void expectFalseComapringBeforeInitialDateWithNull() {
 		LocalDate date1 = LocalDate.of(1981, Month.NOVEMBER, 04);
 		LocalDate date2 = null;
 		
-		boolean result = DateUtil.isDate1AfterDate2(date1, date2);
+		boolean result = DateUtil.isDate1BeforeDate2(date1, date2);
 		System.out.println("[testDateBeforeDate4] Result: " + result);
 		
 		assertEquals(false, result);
 	}
 	
 	@Test()
-	public void testDiffTimeMillis1() {
+	public void diffInTimemillisBetweenDates() {
 		LocalDateTime date1 = LocalDateTime.of(1981, Month.NOVEMBER, 4, 0, 0);
 		LocalDateTime date2 = LocalDateTime.of(1982, Month.JUNE, 6, 0, 0);
 		

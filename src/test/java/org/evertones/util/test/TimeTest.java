@@ -19,7 +19,7 @@ import org.junit.Test;
 public class TimeTest {
 	
 	@Test()
-	public void testTruncateSeconds() {
+	public void truncateSeconds() {
 		LocalTime timeToTruncate = LocalTime.of(10, 15, 32, 443);
 		LocalTime timeTruncated = LocalTime.of(10, 15, 32);
 		LocalTime result = TimeUtil.truncateTime(timeToTruncate, ChronoUnit.SECONDS);
@@ -28,7 +28,7 @@ public class TimeTest {
 	}
 	
 	@Test()
-	public void testTruncateMinutes() {
+	public void truncateMinutes() {
 		LocalTime timeToTruncate = LocalTime.of(10, 15, 32, 443);
 		LocalTime timeTruncated = LocalTime.of(10, 15);
 		LocalTime result = TimeUtil.truncateTime(timeToTruncate, ChronoUnit.MINUTES);
@@ -37,7 +37,7 @@ public class TimeTest {
 	}
 	
 	@Test()
-	public void testTruncateHours() {
+	public void truncateHours() {
 		LocalTime timeToTruncate = LocalTime.of(10, 15, 32, 443);
 		LocalTime timeTruncated = LocalTime.of(10, 00);
 		LocalTime result = TimeUtil.truncateTime(timeToTruncate, ChronoUnit.HOURS);
@@ -46,7 +46,7 @@ public class TimeTest {
 	}
 	
 	@Test()
-	public void testTime1AfterTime2() {
+	public void expectTime1AfterTime2() {
 		LocalTime time1 = LocalTime.of(10, 15, 30, 50);
 		LocalTime time2 = LocalTime.of(10, 15, 30, 30);
 		
@@ -54,7 +54,7 @@ public class TimeTest {
 	}
 	
 	@Test()
-	public void testTime1BeforeTime2() {
+	public void expectTime1BeforeTime2() {
 		LocalTime time1 = LocalTime.of(10, 15, 30, 20);
 		LocalTime time2 = LocalTime.of(10, 15, 30, 30);
 		
@@ -62,7 +62,7 @@ public class TimeTest {
 	}
 	
 	@Test()
-	public void testAddTime1() {
+	public void add15NanosInLocalTime() {
 		LocalTime time = LocalTime.of(10, 20, 30, 40);
 		LocalTime timeExpected = LocalTime.of(10, 20, 30, 55);
 		LocalTime result = TimeUtil.addTime(time, 15, TimeTemporalDiff.NANO);
@@ -71,7 +71,7 @@ public class TimeTest {
 	}
 	
 	@Test()
-	public void testAddTime2() {
+	public void add15SecondsInLocalTime() {
 		LocalTime time = LocalTime.of(10, 20, 30, 40);
 		LocalTime timeExpected = LocalTime.of(10, 20, 45, 40);
 		LocalTime result = TimeUtil.addTime(time, 15, TimeTemporalDiff.SECOND);
@@ -80,7 +80,7 @@ public class TimeTest {
 	}
 	
 	@Test()
-	public void testAddTime3() {
+	public void add15MinutesInLocalTime() {
 		LocalTime time = LocalTime.of(10, 20, 30, 40);
 		LocalTime timeExpected = LocalTime.of(10, 35, 30, 40);
 		LocalTime result = TimeUtil.addTime(time, 15, TimeTemporalDiff.MINUTE);
@@ -89,7 +89,7 @@ public class TimeTest {
 	}
 	
 	@Test()
-	public void testAddTime4() {
+	public void add3HoursInLocalTime() {
 		LocalTime time = LocalTime.of(10, 20, 30, 40);
 		LocalTime timeExpected = LocalTime.of(13, 20, 30, 40);
 		LocalTime result = TimeUtil.addTime(time, 3, TimeTemporalDiff.HOUR);
