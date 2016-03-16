@@ -1,12 +1,12 @@
-package org.evertones.util.test;
+package org.evertones.features.test;
 
 import static org.junit.Assert.assertEquals;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 
-import org.evertones.util.TimeUtil;
-import org.evertones.util.TimeUtil.TimeTemporalDiff;
+import org.evertones.features.datetime.TimeUtil;
+import org.evertones.features.datetime.TimeUtil.TimeTemporalDiff;
 import org.junit.Assert;
 import org.junit.Test;
 

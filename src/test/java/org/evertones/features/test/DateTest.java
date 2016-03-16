@@ -1,4 +1,4 @@
-package org.evertones.util.test;
+package org.evertones.features.test;
 
 import static org.junit.Assert.assertEquals;
 
@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
 
-import org.evertones.util.DateUtil;
+import org.evertones.features.datetime.DateUtil;
 import org.junit.Test;
 
 /**

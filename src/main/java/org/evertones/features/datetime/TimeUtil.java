@@ -1,4 +1,4 @@
-package org.evertones.util;
+package org.evertones.features.datetime;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;

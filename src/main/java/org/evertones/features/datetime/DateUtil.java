@@ -1,4 +1,4 @@
-package org.evertones.util;
+package org.evertones.features.datetime;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

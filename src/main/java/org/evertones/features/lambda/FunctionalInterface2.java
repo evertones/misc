@@ -1,4 +1,4 @@
-package org.evertones.lambda;
+package org.evertones.features.lambda;
 
 public interface FunctionalInterface2<T> {
 
