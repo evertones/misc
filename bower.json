@@ -1,0 +1,16 @@
+{
+  "name": "NodeJS_Routes",
+  "description": "NodeJS with Express and EJS",
+  "main": "server.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  },
+  "homepage": "https://github.com/evertones/nodejs_example2"
+}

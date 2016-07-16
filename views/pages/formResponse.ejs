@@ -1,0 +1,16 @@
+<% include ../partials/pageHeader %>
+
+  <div class="jumbotron">
+    <h1>This is the result of a POST submit</h1> 
+    <p>The values below were submited via POST from a form and re-send to this page using a NodeJS route and an EJS template.</p> 
+  </div>
+
+
+  <div style="margin-left: 5%">
+    <h3>First Name: <small> <%= firstName %> </small></h3>
+    <h3>Last Name: <small> <%= lastName %> </small> </h3>
+    <h3>Sex: <small> <%= sex %> </small></h3>
+  </div>
+
+</body>
+</html>
