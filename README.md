@@ -1,4 +1,4 @@
-# nodejs_example2 Repository
+# Example: Using NodeJS, Express and EJS
 
 ## Description:
   This is a very simple routing example using NodeJS, Express and EJS.
