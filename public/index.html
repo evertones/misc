@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Bootstrap Libraries -->
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+
+</head>
+<body class="container">
+
+	<br>
+	<div class="jumbotron">
+	    <h1>Uploading files with Mutle</h1>
+	    <p>Simple example to upload files using NodeJS, Mutle and Express.</p>
+  </div>
+
+	<form method="POST" action="file" enctype="multipart/form-data">
+			<input class="btn btn-info" type='file' id='upload_file' name='upload_file' />
+      <br>
+			<input class="btn btn-success" type='submit' value='Save' />
+	</form>
+
+</body>
+</html>
