@@ -1,0 +1,27 @@
+/* Task that depends of a given pattern (e.g. `day`) */
+
+task hello << {
+    println 'Hello...'
+}
+
+task dayMorning(dependsOn: hello) << {
+    println 'Good Morning...'
+}
+
+task dayEvening << {
+    println 'Good Evening...'
+}
+
+task dayNight << {
+    println 'Good Night...'
+}
+
+task goodBye << {
+    println 'See ya!!!!'
+}
+
+goodBye.dependsOn {
+    tasks.findAll {
+        task -> task.name.startsWith('day')
+    }
+}

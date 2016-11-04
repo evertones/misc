@@ -1,0 +1,11 @@
+/* Definition of tasks in two different ways */
+
+task hello {
+    doLast {
+        println 'Greetings!!!!'
+    }
+}
+
+task goodBye << {
+    println 'See you later!!!!'
+}
