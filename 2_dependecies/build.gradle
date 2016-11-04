@@ -25,3 +25,15 @@ goodBye.dependsOn {
         task -> task.name.startsWith('day')
     }
 }
+
+task first << {
+    println 'This is the first task'
+}
+
+task second << {
+    println 'This is the second task'
+}
+
+task third(dependsOn: [first, second]) << {
+    println 'This is the third task'
+}

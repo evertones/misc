@@ -9,3 +9,8 @@ task hello {
 task goodBye << {
     println 'See you later!!!!'
 }
+
+task testDescription << {
+    description 'This is a test for task description to simulate a copy.'
+    println("Description applied")
+}
