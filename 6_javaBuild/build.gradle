@@ -1,0 +1,24 @@
+apply plugin: 'java'
+
+sourceSets {
+    main {
+        java {
+            // Here is possible to define where the Java source code will be
+            srcDir 'src/main/java'
+        }
+    }
+
+    test {
+        java {
+            // Here is possible to define where the Java source code for tests will be
+            srcDir 'src/test/java'
+        }
+    }
+}
+
+jar {
+    manifest {
+        // Here is indicated where is located the `main` method to be run when `java -jar <project_name>`
+        attributes 'Main-Class': 'org.evertones.Gradle'
+    }
+}
