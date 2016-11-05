@@ -55,7 +55,7 @@
     - TBD
 
   8. Init task
-    - `cd 6_init`
+    - `cd 8_init`
     - Run `gradle init --type java-library`
       - Check the content for created files `build.gradle` and `settings.gradle`
       - Check the created directory structure under `src` and the Java files in it
