@@ -41,8 +41,8 @@
       - Check in the console that the executed tasks are `:task1` and `:task4`
     - Run `gradle -b src/build.gradle subTask`
       - Check in the console that the executed task is `:subTask`, which is implemented in the file `src/build.gradle`
-
-   6. Java Build
+      
+  6. Java Build
     - `cd 6_javaBuild`
     - Run `gradle build`
       - Check in the console that the executed a few tasks are executed, where one of them is `:build`
@@ -54,9 +54,9 @@
   7. Java Test
     - TBD
 
-   8. Init task
-     - `cd 6_init`
-     - Run `gradle init --type java-library`
-       - Check the content for created files `build.gradle` and `settings.gradle`
-       - Check the created directory structure under `src` and the Java files in it
-       - Check more information in the [documentation](https://docs.gradle.org/current/userguide/build_init_plugin.html)
+  8. Init task
+    - `cd 6_init`
+    - Run `gradle init --type java-library`
+      - Check the content for created files `build.gradle` and `settings.gradle`
+      - Check the created directory structure under `src` and the Java files in it
+      - Check more information in the [documentation](https://docs.gradle.org/current/userguide/build_init_plugin.html)
