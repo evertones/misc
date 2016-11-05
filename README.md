@@ -5,6 +5,7 @@
 
 ## Pre-requisites
   1. To have Gradle installed
+  2. To have Java installed
 
 ## Checking existing tasks  
   Inside any folder run `gradle tasks` to see the tasks available to be run.
