@@ -1,0 +1,16 @@
+/* Definition of tasks in two different ways */
+
+task hello {
+    doLast {
+        println 'Greetings!!!!'
+    }
+}
+
+task goodBye << {
+    println 'See you later!!!!'
+}
+
+task testDescription << {
+    description 'This is a test for task description to simulate a copy.'
+    println("Description applied")
+}
