@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 routes = require('./routes/routes')(app);
 
 /* Init http service */
-var serverPort = 8080;
+var serverPort = 3000;
 var serverIpAaddress = '127.0.0.1';
 
 var server = app.listen(serverPort, serverIpAaddress, function() {
