@@ -1,10 +1,8 @@
 
-[![Build Status](https://travis-ci.org/evertones/java8_features.svg?branch=master)](https://travis-ci.org/evertones/java8_features)
-
-# java8_features Repository
+[![Build Status](https://travis-ci.org/evertones/java8_features.svg?branch=master)](https://travis-ci.org/evertones/misc/java8)
 
 ## Description:
-This is a set of simple code samples of some new features released in Java 8.
+This is a set of simple code examples for some new Java features released in Java 8.
 
 ## Content:
 
