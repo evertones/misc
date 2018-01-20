@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Thymeleaf + Spring Security</title>
+    <div th:replace="layout/header :: header-css"></div>
+</head>
+<body>
+
+    <div th:replace="layout/header :: header"></div>
+
+    <div class="container">
+        <div class="starter-template">
+            <h1>Spring Boot Web Thymeleaf + Spring Security</h1>
+            <h2>1. Visit <a th:href="@{/admin}">Admin page (needs ROLE_ADMIN to be accessed)</a></h2>
+            <h2>2. Visit <a th:href="@{/user}">User page (needs ROLE_USER to be accessed)</a></h2>
+            <h2>3. Visit <a th:href="@{/about}">Normal page</a></h2>
+        </div>
+    </div>
+
+    <div th:replace="layout/footer :: footer"></div>
+
+</body>
+</html>

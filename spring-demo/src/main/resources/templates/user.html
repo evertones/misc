@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="layout/header :: header-css"></div>
+</head>
+<body>
+
+    <div th:replace="layout/header :: header"></div>
+
+    <div class="container">
+        <div class="starter-template">
+            <h1>User page (Spring Security protected)</h1>
+            <p>This page is accessible only for users with <b>ROLE_ADMIN</b> or <b>ROLE_USER</b> role.</p>
+
+            <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+            <form th:action="@{/logout}" method="post">
+                <input type="submit" value="Sign Out"/>
+            </form>
+
+        </div>
+    </div>
+    <div th:replace="layout/footer :: footer"></div>
+
+</body>
+</html>
