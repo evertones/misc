@@ -1,7 +1,7 @@
 # misc
 
 This repository is just an agregation of code examples.
-Its name is a short abreviation for `Miscellaneous`.
+Its name is a short abbreviation for `Miscellaneous`.
 
 ## Definition of miscellaneous
 
