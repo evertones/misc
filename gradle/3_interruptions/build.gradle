@@ -1,13 +1,13 @@
 /* This shows how to interrupt the execution of a task */
 
-task eclipse << { println 'eclipse' }
+task eclipse { println 'eclipse' }
 
 eclipse.onlyIf {
     project.hasProperty('usingEclipse')
 }
 
 eclipse.doFirst {
-    if(!usingEclipse) {
+    if (!usingEclipse) {
         throw new StopExecutionException()
     }
 }

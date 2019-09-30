@@ -1,22 +1,22 @@
 /* Task that depends of a given pattern (e.g. `day`) */
 
-task hello << {
+task hello {
     println 'Hello...'
 }
 
-task dayMorning(dependsOn: hello) << {
+task dayMorning(dependsOn: hello) {
     println 'Good Morning...'
 }
 
-task dayEvening << {
+task dayEvening {
     println 'Good Evening...'
 }
 
-task dayNight << {
+task dayNight {
     println 'Good Night...'
 }
 
-task goodBye << {
+task goodBye {
     println 'See ya!!!!'
 }
 
@@ -26,14 +26,14 @@ goodBye.dependsOn {
     }
 }
 
-task first << {
+task first {
     println 'This is the first task'
 }
 
-task second << {
+task second {
     println 'This is the second task'
 }
 
-task third(dependsOn: [first, second]) << {
+task third(dependsOn: [first, second]) {
     println 'This is the third task'
 }

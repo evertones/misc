@@ -9,7 +9,7 @@ class PluginTest implements Plugin<Project> {
       project.extensions.create("myplugin", PluginTestPluginExtension)
 
       // Add a task that uses the configuration
-      project.task('myPlugin') << {
+      project.task('myPlugin') {
          println project.myplugin.message
       }
    }
