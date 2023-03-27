@@ -1,6 +1,6 @@
 # misc
 
-This repository is just an agregation of code examples.
+This is a monorepo that aggregartes some code examples with NodeJS and Java.
 Its name is a short abbreviation for `Miscellaneous`.
 
 ## Definition of miscellaneous
